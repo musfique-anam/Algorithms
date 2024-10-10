@@ -1,4 +1,3 @@
-package DataStructuresAlgorithms;
 import java.util.Scanner;
 public class QuickSort {
 
