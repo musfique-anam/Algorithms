@@ -2,8 +2,27 @@ import java.util.*;
 
 class BFS {
 
+    static void bfs(List<List<Integer>> adj, int s) {
+        Queue<Integer> q =new LinkedList<>();
+        boolean[] visited =new boolean[adj.size()];
+        visited[s] =true;
+        q.add(s);
+
+        while (!q.isEmpty()) {
+            int curr =q.poll();
+            System.out.print(curr + " ");
+
+            for (int neighbor : adj.get(curr)) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] =true;
+                    q.add(neighbor);
+                }
+            }
+        }
+    }
+
     static void addEdge(List<List<Integer>> adj,int u,int v){
-        adj.get(u).add(V);
+        adj.get(u).add(v);
         adj.get(v).add(u);
     }
 
