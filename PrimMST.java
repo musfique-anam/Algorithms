@@ -77,5 +77,6 @@ class PrimMST {
 
         mst.primMethod(edges);
     }
+    
 }
 
