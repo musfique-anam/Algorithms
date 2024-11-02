@@ -1,4 +1,4 @@
-class PrimMST {
+class PrimsMST {
     
     private static final int V = 6;  
     
@@ -53,7 +53,7 @@ class PrimMST {
     }
 
     public static void main(String[] args) {
-        PrimMST mst = new PrimMST();
+        PrimsMST mst = new PrimsMST();
         int [][] graph =new int [][] {
             {0,2,0,0,0,1},
             {2,0,3,0,0,0},
