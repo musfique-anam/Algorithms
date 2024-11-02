@@ -1,2 +1,2 @@
-# DataStructuresAlgorithms
-Algorithms in Java, including Divide & Conquer, Greedy Algorithm, Dynamic Programming for Searching, Sorting, Graph & Tree operations..
+# Data Structures & Algorithms
+Algorithms in Java, including Divide & Conquer, Greedy Algorithm, Dynamic Programming for Searching, Sorting, Graph & Tree operations.
