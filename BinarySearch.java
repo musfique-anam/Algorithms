@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+
 public class BinarySearch{
     int binarySearch(int a[], int start,int end,int m){
         while (start <= end) {
@@ -13,6 +14,7 @@ public class BinarySearch{
             }
         }return -1;
     }
+    
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
         System.out.println("Enter the total number of elements :");
