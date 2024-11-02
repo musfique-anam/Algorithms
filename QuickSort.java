@@ -38,6 +38,7 @@ public class QuickSort {
         for(int i=0;i<n;i++)
             System.out.print(a[i]+" ");
     }
+    
     public static void main(String[] args) {
         Scanner reader=new Scanner(System.in);
         System.out.println("Enter the size of the array :");
