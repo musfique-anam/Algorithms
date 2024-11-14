@@ -1,46 +1,47 @@
 import java.util.*;
 
 public class BFS {
-    static void bfs(List<List<Integer>>adj,int s) {
-        Queue<Integer> q=new LinkedList<>();
-        boolean[] visited =new boolean[adj.size()];
-        visited[s]=true;
+    
+    static void bfs(int[][] adjMatrix, int s) {
+        int V = adjMatrix.length;
+        Queue<Integer> q = new LinkedList<>();
+        boolean[] visited = new boolean[V];
+        
+        visited[s] = true;
         q.add(s);
 
-        while(!q.isEmpty()) {
-            int curr=q.poll();
-            System.out.print(curr +" ");
-        
-        for(int x:adj.get(curr)) {
-            if (!visited[x]) {
-                visited[x]=true;
-                q.add(x);
+        while (!q.isEmpty()) {
+            int curr = q.poll();
+            System.out.print(curr + " ");
+            //System.out.print((char) (curr + 'A') + " ");
+            
+            for (int v = 0; v < V; v++) {
+                // Check if there's an edge and the node hasn't been visited
+                if (adjMatrix[curr][v] == 1 && !visited[v]) {
+                    visited[v] = true;
+                    q.add(v);
+                }
             }
         }
     }
-}
-        
-
-    static void addEdge (List<List<Integer>> adj,int u,int v) {
-        adj.get(u).add(v);
-        adj.get(v).add(u);
+    
+    static void addEdge(int[][] adjMatrix, int u, int v) {
+        adjMatrix[u][v] = 1;
+        adjMatrix[v][u] = 1;
     }
 
     public static void main(String[] args) {
-        int V=5;
-        List<List<Integer>> adj=new ArrayList<>(V);
-        for (int i=0;i<V;i++){
-            adj.add(new ArrayList<>());
-        }
-        addEdge(adj,0,1);
-        addEdge(adj,0,2);
-        addEdge(adj,1,3);
-        addEdge(adj,1,4);
-        addEdge(adj,2,4);
+        int V = 5;
+        int[][] adjMatrix = new int[V][V];
+
+        addEdge(adjMatrix, 0, 1);
+        addEdge(adjMatrix, 0, 2);
+        addEdge(adjMatrix, 1, 3);
+        addEdge(adjMatrix, 1, 4);
+        addEdge(adjMatrix, 2, 4);
 
         System.out.println("BFS starting from 0:");
-        bfs(adj,0);
-        
+        //System.out.println("BFS starting from vertex A:");
+        bfs(adjMatrix, 0);
     }
 }
-
