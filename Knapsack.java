@@ -3,7 +3,7 @@
 public class Knapsack {
     private static final int [] values ={300,200,400,500};
     private static final int [] weights ={2,1,5,3};
-    private static int capacity =10;
+    private static final int capacity =10;
 
     private static int knapsackTabulation () {
         int n=values.length;
@@ -27,7 +27,7 @@ public class Knapsack {
         int w=capacity;
         for(int i=n;i>0;i--){
             if(tab[i][w] !=tab[i-1][w]){
-                System.out.print((i-1)+" ");
+                System.out.print((i)+" ");
                 w-=weights[i-1];
             }
         }
@@ -38,12 +38,5 @@ public class Knapsack {
     }
     public static void main(String[] args) {
         System.out.println("Maximum value in knapsack = "+knapsackTabulation());
-    }
-    //Getter & Setter for 'capacity'
-    public static int getCapacity(){
-        return capacity;
-    }
-    public static void setCapacity(int capacity) {
-        Knapsack.capacity = capacity;
     }
 }
