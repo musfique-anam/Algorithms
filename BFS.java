@@ -12,8 +12,8 @@ public class BFS {
 
         while (!q.isEmpty()) {
             int curr = q.poll();
-            System.out.print(curr + " ");
-            //System.out.print((char) (curr + 'A') + " ");
+            //System.out.print(curr + " ");
+            System.out.print((char) (curr + 'A') + " ");
             
             for (int v = 0; v < V; v++) {
                 // Check if there's an edge and the node hasn't been visited
@@ -40,8 +40,8 @@ public class BFS {
         addEdge(adjMatrix, 1, 4);
         addEdge(adjMatrix, 2, 4);
 
-        System.out.println("BFS starting from 0:");
-        //System.out.println("BFS starting from vertex A:");
+        //System.out.println("BFS starting from 0:");
+        System.out.println("BFS starting from vertex A:");
         bfs(adjMatrix, 0);
     }
 }
