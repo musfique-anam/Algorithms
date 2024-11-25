@@ -37,6 +37,6 @@ public class Knapsack {
         return tab[n][capacity];
     }
     public static void main(String[] args) {
-        System.out.println("Maximum value in knapsack = "+knapsackTabulation());
+        System.out.println("Maximum value in knapsackee = "+knapsackTabulation());
     }
 }
