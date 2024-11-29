@@ -10,20 +10,20 @@ public class FracKnapsack {
         int maxi;
         int[] used = new int[n];
         
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < n; i++) {
             used[i] = 0;
         }
         
         while (cur_w > 0) {
             maxi = -1;
-            for (int i = 0; i < n; ++i) {
+            for (int i = 0; i < n; i++) {
                 if (used[i] == 0 && (maxi == -1 || (float) w[i] / p[i] > (float) w[maxi] / p[maxi])) {
                     maxi = i;
                 }
             }
             used[maxi] = 1;
-            cur_w -= p[maxi];
-            tot_v += w[maxi];
+            cur_w = cur_w - p[maxi];
+            tot_v = tot_v + w[maxi];
             
             if (cur_w < 0) {
                 tot_v -= w[maxi];

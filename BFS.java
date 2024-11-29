@@ -19,7 +19,7 @@ public class BFS {
                 // Check if there's an edge and the node hasn't been visited
                 if (adjMatrix[curr][v] == 1 && !visited[v]) {
                     visited[v] = true;
-                    q.add(v);
+                    q.add(v);//adjacency is 'v',so add it
                 }
             }
         }
